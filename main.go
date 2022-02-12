@@ -13,11 +13,11 @@ func main() {
 	fmt.Println(quote.Go())
 	config, err := rest.InClusterConfig()
 	if err != nil {
-		return nil, err
+		panic(err.Error())
 	}
 
 	clientset, err := kubernetes.NewForConfig(config)
 	if err != nil {
-		return nil, err
+		panic(err.Error())
 	}
 }
