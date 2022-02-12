@@ -11,7 +11,7 @@ import (
 func main() {
 	fmt.Println("hello world")
 	fmt.Println(quote.Go())
-	config, err := rest.inClusterConfig()
+	config, err := rest.InClusterConfig()
 	if err != nil {
 		return nil, err
 	}
