@@ -20,7 +20,8 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
-	pods, err := clientset.CoreV1().Pods("")
+	// pods, err := clientset.CoreV1().Pods("")
+	pods := clientset.CoreV1().Pods("")
 	if err != nil {
 		panic(err.Error())
 	}
