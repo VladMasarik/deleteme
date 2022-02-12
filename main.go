@@ -11,12 +11,12 @@ import (
 func main() {
 	fmt.Println("hello world")
 	fmt.Println(quote.Go())
-	config, err := rest.inclusterconfig()
+	config, err := rest.inClusterConfig()
 	if err != nil {
 		return nil, err
 	}
 
-	clientset, err := kubernetes.NewForConfig()
+	clientset, err := kubernetes.NewForConfig(config)
 	if err != nil {
 		return nil, err
 	}
