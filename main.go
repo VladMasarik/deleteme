@@ -20,4 +20,9 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
+	pods, err := clientset.CoreV1().Pods("")
+	if err != nil {
+		panic(err.Error())
+	}
+	fmt.Printf("There are %d pods in the cluster\n", len(pods.Items))
 }
