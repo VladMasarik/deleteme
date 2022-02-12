@@ -25,5 +25,5 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
-	fmt.Printf("There are %d pods in the cluster\n", len(pods.Items))
+	fmt.Printf("There are %d pods in the cluster\n", pods)
 }
