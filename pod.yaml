@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: deleteme
+spec:
+  containers:
+  - name: main
+    image: golang:1.17
+    command:
+    - "sleep"
+    - "100000"
